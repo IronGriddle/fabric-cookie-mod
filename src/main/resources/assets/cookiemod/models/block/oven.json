@@ -1,0 +1,14 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "all": "cookiemod:block/oven",
+    "up": "cookiemod:block/oven",
+    "down" : "cookiemod:block/oven",
+    "north": "cookiemod:block/oven",
+    "east": "cookiemod:block/oven",
+    "south": "cookiemod:block/oven",
+    "west": "cookiemod:block/oven",
+    "particles": "cookiemod:block/oven"
+
+  }
+}

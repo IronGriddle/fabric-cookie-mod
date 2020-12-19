@@ -1,0 +1,17 @@
+{
+
+  "block.cookiemod.big_cookie" : "Big Cookie",
+  "message.big_cookie" : "phat cookie",
+
+  "block.cookiemod.oven" : "Oven",
+
+  "block.cookiemod.cookie_jar" : "Cookie Jar",
+
+  "item.cookiemod.crumbled_cookie" : "Cookie Crumbs",
+  "message.crumbled_cookie" : "aww man",
+
+
+  "_comment" : "Creative Tabs",
+  "itemGroup.cookiemod" : "Cookie Mod",
+  "itemGroup.cookies" : "Cookies"
+}

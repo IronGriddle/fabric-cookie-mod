@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "bigcookielayer=1": {"model": "cookiemod:block/big_cookie"},
+    "bigcookielayer=2": {"model": "cookiemod:block/big_cookie_2"},
+    "bigcookielayer=3": {"model": "cookiemod:block/big_cookie_3"},
+    "bigcookielayer=4": {"model": "cookiemod:block/big_cookie_4"}
+  }
+}
