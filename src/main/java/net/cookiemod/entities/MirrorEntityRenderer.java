@@ -8,10 +8,10 @@ import software.bernie.geckolib3.renderer.geo.GeoBlockRenderer;
 public class MirrorEntityRenderer extends GeoBlockRenderer<MirrorEntity> {
 
     public MirrorEntityRenderer(BlockEntityRenderDispatcher rendererDispatcherIn) {
-
-
         super(rendererDispatcherIn, new MirrorModel());
     }
+
+
 
 
 }

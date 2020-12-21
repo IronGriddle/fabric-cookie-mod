@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.model.new": {
+		"animation.mirror.rotate": {
 			"loop": true,
 			"animation_length": 1.05,
 			"bones": {
@@ -24,6 +24,28 @@
 						"1.0": {
 							"vector": [0, -45, 0],
 							"easing": "easeInOutSine"
+						}
+					}
+				},
+				"stands": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.04": {
+							"vector": [0, "rotation_y", 0],
+							"easing": "easeOutSine"
+						}
+					}
+				},
+				"mirror": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.04": {
+							"vector": [0, 0, "rotation_z"],
+							"easing": "easeOutSine"
 						}
 					}
 				}

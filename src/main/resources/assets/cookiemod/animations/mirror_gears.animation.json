@@ -1,10 +1,6 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.mirror.idle": {
-			"loop": true,
-			"animation_length": 1.04
-		},
 		"animation.mirror.rotate": {
 			"loop": true,
 			"animation_length": 1.05,
@@ -28,6 +24,64 @@
 						"1.0": {
 							"vector": [0, -45, 0],
 							"easing": "easeInOutSine"
+						}
+					}
+				},
+				"stands": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, "current_y_rotation", 0]
+						},
+						"1.04": {
+							"vector": [0, "next_y_rotation", 0],
+							"easing": "easeOutSine"
+						}
+					}
+				},
+				"mirror": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, "current_z_rotation"]
+						},
+						"1.04": {
+							"vector": [0, 0, "next_z_rotation"],
+							"easing": "easeOutSine"
+						}
+					}
+				}
+			}
+		},
+		"animation.mirror.idle": {
+			"loop": true,
+			"animation_length": 10.08,
+			"bones": {
+				"stands": {
+					"rotation": {
+						"vector": [0, "current_y_rotation", 0]
+					}
+				},
+				"mirror": {
+					"rotation": {
+						"vector": [0, 0, "current_z_rotation"]
+					}
+				},
+				"gear_big": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"10.08": {
+							"vector": [0, 180, 0]
+						}
+					}
+				},
+				"gear_big2": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"10.08": {
+							"vector": [0, -360, 0]
 						}
 					}
 				}

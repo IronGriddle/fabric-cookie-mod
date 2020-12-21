@@ -1,6 +1,7 @@
 package net.cookiemod.blocks;
 
 import net.cookiemod.entities.MirrorEntity;
+import net.cookiemod.helpers.VectorUtils;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockRenderType;
@@ -20,10 +21,20 @@ public class Mirror extends Block implements BlockEntityProvider {
         super(settings.nonOpaque());
     }
 
+    //TODO use tags.
+    @Override
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+
+
+        MirrorEntity entity = (MirrorEntity) world.getBlockEntity(pos);
+        //entity.setNextRotation(VectorUtils.blockPosToVector(pos),  player.getPos());
+        entity.randomRotation();
 
 
 
-    //Geckolib setup
+        return super.onUse(state, world, pos, player, hand, hit);
+    }
+
     @Override
     public BlockRenderType getRenderType(BlockState state)
     {
