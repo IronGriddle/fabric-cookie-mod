@@ -1,12 +1,9 @@
 package net.cookiemod.items;
 
-import net.cookiemod.setup.SoundRegistration;
+import net.cookiemod.registry.Sounds;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
-
-import static net.cookiemod.setup.SoundRegistration.SNIFF;
 
 public class QuickEats extends Item {
 
@@ -28,7 +25,7 @@ public class QuickEats extends Item {
 
     @Override
     public SoundEvent getEatSound() {
-        return SoundRegistration.NONE;
+        return Sounds.NONE;
     }
 
 

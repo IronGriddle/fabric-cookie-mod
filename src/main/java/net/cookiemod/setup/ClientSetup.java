@@ -1,12 +1,10 @@
 package net.cookiemod.setup;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.RenderPhase;
 
-import static net.cookiemod.setup.BlockRegistration.COOKIE_CROP;
-import static net.cookiemod.setup.BlockRegistration.COOKIE_JAR_BLOCK;
+import static net.cookiemod.registry.Blocks.COOKIE_CROP;
+import static net.cookiemod.registry.Blocks.COOKIE_JAR_BLOCK;
 
 public class ClientSetup implements ClientModInitializer {
 

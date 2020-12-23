@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/crop",
   "textures": {
-    "crop": "cookiemod:block/golden_cookie"
+    "crop": "cookiemod:block/crop/cookies_stage3"
   }
 }

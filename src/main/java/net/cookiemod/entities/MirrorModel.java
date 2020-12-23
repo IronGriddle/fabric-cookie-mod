@@ -22,9 +22,9 @@ public class MirrorModel extends AnimatedGeoModel<MirrorEntity>{
         float nextYaw = entity.nextYaw;
 
 
+
         GeckoLibCache.getInstance().parser.setValue("current_z_rotation", currentPitch);
         GeckoLibCache.getInstance().parser.setValue("current_y_rotation", currentYaw);
-
 
         GeckoLibCache.getInstance().parser.setValue("next_z_rotation", nextPitch);
         GeckoLibCache.getInstance().parser.setValue("next_y_rotation", nextYaw);

@@ -1,11 +1,11 @@
-package net.cookiemod.setup;
+package net.cookiemod.registry;
 
 
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class SoundRegistration {
+public class Sounds {
 
 
     //Kinda weird that you have to make ID?

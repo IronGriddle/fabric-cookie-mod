@@ -1,19 +1,14 @@
-package net.cookiemod.setup;
+package net.cookiemod.registry;
 
-import net.cookiemod.CookieMod;
 import net.cookiemod.entities.CookieJarEntity;
 import net.cookiemod.entities.MirrorEntity;
-import net.cookiemod.entities.MirrorEntityRenderer;
 import net.cookiemod.entities.OvenEntity;
-import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.rendereregistry.v1.BlockEntityRendererRegistry;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.registry.Registry;
-import software.bernie.example.registry.TileRegistry;
 
-import static net.cookiemod.setup.BlockRegistration.*;
+import static net.cookiemod.registry.Blocks.*;
 
-public class EntityRegistration  {
+public class Entities {
 
 
     public static BlockEntityType<CookieJarEntity> COOKIE_JAR_ENTITY;

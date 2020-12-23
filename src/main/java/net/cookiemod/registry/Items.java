@@ -1,21 +1,16 @@
-package net.cookiemod.setup;
+package net.cookiemod.registry;
 
-import net.cookiemod.items.CrumbledCookie;
 import net.cookiemod.items.QuickEats;
-import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.tag.TagRegistry;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
-import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 import static net.cookiemod.CookieMod.MODID;
-import static net.cookiemod.setup.BlockRegistration.*;
+import static net.cookiemod.registry.Blocks.*;
 import static net.cookiemod.setup.ModSetup.COOKIE_GROUP;
 
-public class ItemRegistration  {
+public class Items {
 
 
 

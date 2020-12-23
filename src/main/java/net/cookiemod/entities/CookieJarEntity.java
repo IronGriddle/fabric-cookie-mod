@@ -4,13 +4,12 @@ package net.cookiemod.entities;
 import net.cookiemod.items.ImplementedInventory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.collection.DefaultedList;
 
-import static net.cookiemod.setup.EntityRegistration.COOKIE_JAR_ENTITY;
+import static net.cookiemod.registry.Entities.COOKIE_JAR_ENTITY;
 
 public class CookieJarEntity extends BlockEntity implements ImplementedInventory {
 

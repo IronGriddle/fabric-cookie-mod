@@ -1,21 +1,11 @@
 package net.cookiemod.entities;
 
-import net.fabricmc.api.ModInitializer;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.util.registry.Registry;
 
 
-
-
-
-
-
-
-
-import static net.cookiemod.setup.EntityRegistration.OVEN_BLOCK_ENTITY;
+import static net.cookiemod.registry.Entities.OVEN_BLOCK_ENTITY;
 
 public class OvenEntity extends BlockEntity {
 

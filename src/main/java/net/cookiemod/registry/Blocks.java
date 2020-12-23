@@ -1,23 +1,15 @@
-package net.cookiemod.setup;
+package net.cookiemod.registry;
 
 import net.cookiemod.blocks.*;
-import net.cookiemod.items.CrumbledCookie;
-import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.CropBlock;
 import net.minecraft.block.Material;
-import net.minecraft.item.FoodComponent;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 import static net.cookiemod.CookieMod.MODID;
 
-public class BlockRegistration  {
+public class Blocks {
 
     public static final Block BIG_COOKIE = new BigCookie(FabricBlockSettings.of(Material.CAKE).hardness(0.5f));
     public static final Block OVEN_BLOCK = new Oven(FabricBlockSettings.of(Material.METAL));

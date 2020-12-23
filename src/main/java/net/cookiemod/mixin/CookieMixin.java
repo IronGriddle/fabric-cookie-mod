@@ -1,33 +1,22 @@
 package net.cookiemod.mixin;
 
-import net.cookiemod.items.QuickEats;
-import net.minecraft.advancement.criterion.Criteria;
-import net.minecraft.client.gui.screen.TitleScreen;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.HungerManager;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stat;
 import net.minecraft.stat.Stats;
-import net.minecraft.tag.Tag;
 import net.minecraft.world.World;
-import org.apache.logging.log4j.core.jmx.Server;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static net.cookiemod.setup.ItemRegistration.DUSTED_COOKIE;
-import static net.cookiemod.setup.ModSetup.SUPER_SNACK;
-import static net.cookiemod.setup.SoundRegistration.SNIFF;
+import static net.cookiemod.registry.Items.DUSTED_COOKIE;
+import static net.cookiemod.registry.Sounds.SNIFF;
 
 //Important link:
 //https://fabricmc.net/wiki/tutorial:mixin_examples

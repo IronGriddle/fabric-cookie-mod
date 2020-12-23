@@ -21,16 +21,20 @@ public class Mirror extends Block implements BlockEntityProvider {
         super(settings.nonOpaque());
     }
 
+    
+
     //TODO use tags.
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 
 
+
         MirrorEntity entity = (MirrorEntity) world.getBlockEntity(pos);
         //entity.setNextRotation(VectorUtils.blockPosToVector(pos),  player.getPos());
-        entity.randomRotation();
 
-
+        if (entity.reachedTarget){
+            entity.randomRotation();
+        }
 
         return super.onUse(state, world, pos, player, hand, hit);
     }

@@ -7,7 +7,6 @@ import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -21,7 +20,7 @@ import net.minecraft.world.World;
 
 import java.util.stream.Stream;
 
-import static net.cookiemod.setup.ItemRegistration.BIGCOOKIE_ITEM;
+import static net.cookiemod.registry.Items.BIGCOOKIE_ITEM;
 
 public class BigCookie extends Block {
 
