@@ -1,10 +1,12 @@
 package net.cookiemod.registry;
 
+import net.cookiemod.items.DiceItem;
 import net.cookiemod.items.QuickEats;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import org.lwjgl.system.CallbackI;
 
 import static net.cookiemod.CookieMod.MODID;
 import static net.cookiemod.registry.Blocks.*;
@@ -43,6 +45,8 @@ public class Items {
 
 
 
+    public static final Item DICE = new DiceItem(new FabricItemSettings().group(COOKIE_GROUP));
+
 
     public static void init() {
 
@@ -52,6 +56,7 @@ public class Items {
         Registry.register(Registry.ITEM, new Identifier(MODID, "oven" ), OVEN_ITEM);
         Registry.register(Registry.ITEM, new Identifier(MODID, "cookie_jar" ), COOKIE_JAR_ITEM);
         Registry.register(Registry.ITEM, new Identifier(MODID, "mirror" ), MIRROR_ITEM);
+        Registry.register(Registry.ITEM, new Identifier(MODID, "dice.item.json" ), DICE);
     }
 
 }

@@ -1,6 +1,7 @@
 package net.cookiemod.registry;
 
 import net.cookiemod.blocks.*;
+import net.cookiemod.blocks.Mirror;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;

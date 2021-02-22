@@ -1,10 +1,9 @@
-package net.cookiemod.entities;
+package net.cookiemod.model;
 
 
 import net.cookiemod.CookieMod;
-import net.cookiemod.blocks.Mirror;
+import net.cookiemod.entities.MirrorEntity;
 import net.minecraft.util.Identifier;
-import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 import software.bernie.geckolib3.resource.GeckoLibCache;
@@ -25,14 +24,8 @@ public class MirrorModel extends AnimatedGeoModel<MirrorEntity>{
 
         GeckoLibCache.getInstance().parser.setValue("current_z_rotation", currentPitch);
         GeckoLibCache.getInstance().parser.setValue("current_y_rotation", currentYaw);
-
         GeckoLibCache.getInstance().parser.setValue("next_z_rotation", nextPitch);
         GeckoLibCache.getInstance().parser.setValue("next_y_rotation", nextYaw);
-
-
-
-
-
 
 
 

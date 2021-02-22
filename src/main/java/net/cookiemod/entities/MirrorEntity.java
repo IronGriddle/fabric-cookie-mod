@@ -18,6 +18,7 @@ import software.bernie.geckolib3.core.snapshot.BoneSnapshot;
 
 import java.util.HashMap;
 
+import static net.cookiemod.helpers.VectorUtils.blockPosToVector;
 import static net.cookiemod.registry.Entities.MIRROR_ENTITY;
 
 public class MirrorEntity extends BlockEntity implements IAnimatable {
@@ -29,22 +30,17 @@ public class MirrorEntity extends BlockEntity implements IAnimatable {
     public float currentPitch = 0;
     public float nextYaw = 0 ;
     public float nextPitch = 0;
+    private boolean reachedTarget = true;
 
-    public boolean reachedTarget = true;
-    private HashMap<IBone, BoneSnapshot> bones;
-
+    private AnimationController controller;
+    private final AnimationFactory factory = new AnimationFactory(this);
 
     public MirrorEntity() {
         super(MIRROR_ENTITY);
     }
 
-
-
-    private final AnimationFactory factory = new AnimationFactory(this);
-
     private <E extends BlockEntity & IAnimatable> PlayState predicate(AnimationEvent<E> event) {
-
-        AnimationController controller = event.getController();
+        controller = event.getController();
         controller.transitionLengthTicks = 0;
 
         if (!this.reachedTarget){
@@ -53,13 +49,11 @@ public class MirrorEntity extends BlockEntity implements IAnimatable {
             this.reachedTarget = true;
         }
 
-        else if (controller.getAnimationState() == AnimationState.Stopped) {
-            //set pitch and yaw, now that the rotation has been made.
-            //set the bones?
-            this.currentPitch = nextPitch;
-            this.currentYaw = nextYaw;
+        else if (controller.getAnimationState() == AnimationState.Stopped || controller.getCurrentAnimation() == null) {
 
-            System.out.println("Idling");
+            this.currentPitch = this.nextPitch;
+            this.currentYaw = this.nextYaw;
+            markDirty();
             controller.setAnimation(new AnimationBuilder().addAnimation("animation.mirror.idle", true));
         }
         return PlayState.CONTINUE;
@@ -71,13 +65,14 @@ public class MirrorEntity extends BlockEntity implements IAnimatable {
         this.reachedTarget = false;
         this.nextYaw = (float) (Math.random() * (360 + 1) + -180);
         this.nextPitch = (float) (Math.random() * (360 + 1) + -180);
-        markDirty();
     }
 
-    public void setNextRotation(Vec3d position, Vec3d target){
-        this.nextYaw = VectorUtils.yawTowards((position), (target));
-        this.nextPitch = VectorUtils.pitchTowards((position), (target));
-        reachedTarget = false;
+    public void setNextRotation(Vec3d origin, Vec3d target){
+        if (this.reachedTarget = true){
+            this.reachedTarget = false;
+            this.nextYaw = (float) VectorUtils.yawTowards(origin, target);
+            this.nextPitch = (float) VectorUtils.pitchTowards(origin , target);
+        }
     }
 
 
@@ -85,7 +80,6 @@ public class MirrorEntity extends BlockEntity implements IAnimatable {
     public void registerControllers(AnimationData data) {
         AnimationController controller = new AnimationController(this, "controller", 0, this::predicate);
         data.addAnimationController(controller);
-        bones = data.getBoneSnapshotCollection();
     }
 
     @Override
@@ -96,14 +90,16 @@ public class MirrorEntity extends BlockEntity implements IAnimatable {
     @Override
     public void fromTag(BlockState state, CompoundTag tag) {
         super.fromTag(state, tag);
-        tag.putFloat("yaw", this.currentYaw);
-        tag.putFloat("pitch", this.currentPitch);
+        currentYaw = tag.getFloat("yaw");
+        currentPitch = tag.getFloat("pitch");
     }
+
 
     @Override
     public CompoundTag toTag(CompoundTag tag) {
-        this.currentYaw = tag.getFloat("yaw");
-        this.currentPitch = tag.getFloat("pitch");
+        super.toTag(tag);
+        tag.putFloat("yaw", this.currentYaw);
+        tag.putFloat("pitch", this.currentPitch);
         return tag;
     }
 
