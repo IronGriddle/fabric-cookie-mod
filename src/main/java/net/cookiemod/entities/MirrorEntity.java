@@ -13,12 +13,7 @@ import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
-import software.bernie.geckolib3.core.processor.IBone;
-import software.bernie.geckolib3.core.snapshot.BoneSnapshot;
 
-import java.util.HashMap;
-
-import static net.cookiemod.helpers.VectorUtils.blockPosToVector;
 import static net.cookiemod.registry.Entities.MIRROR_ENTITY;
 
 public class MirrorEntity extends BlockEntity implements IAnimatable {
@@ -59,14 +54,6 @@ public class MirrorEntity extends BlockEntity implements IAnimatable {
         return PlayState.CONTINUE;
     }
 
-
-    //set yaw and pitch randomly
-    public void randomRotation(){
-        this.reachedTarget = false;
-        this.nextYaw = (float) (Math.random() * (360 + 1) + -180);
-        this.nextPitch = (float) (Math.random() * (360 + 1) + -180);
-    }
-
     public void setNextRotation(Vec3d origin, Vec3d target){
         if (this.reachedTarget = true){
             this.reachedTarget = false;
@@ -74,7 +61,6 @@ public class MirrorEntity extends BlockEntity implements IAnimatable {
             this.nextPitch = (float) VectorUtils.pitchTowards(origin , target);
         }
     }
-
 
     @Override
     public void registerControllers(AnimationData data) {
@@ -93,7 +79,6 @@ public class MirrorEntity extends BlockEntity implements IAnimatable {
         currentYaw = tag.getFloat("yaw");
         currentPitch = tag.getFloat("pitch");
     }
-
 
     @Override
     public CompoundTag toTag(CompoundTag tag) {

@@ -4,6 +4,18 @@
     "sounds": [
       "cookiemod:sniff_1"
     ]
+  },
+  "villager_fade": {
+    "subtitle": "subtitles.cookiemod.villager_fade",
+    "sounds": [
+      "cookiemod:villager_fade_1"
+    ]
+  },
+  "general_fade": {
+    "subtitle": "subtitles.cookiemod.general_fade",
+    "sounds": [
+      "cookiemod:general_fade_1"
+    ]
   }
 }
 

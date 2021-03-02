@@ -5,6 +5,8 @@
 
   "block.cookiemod.oven" : "Oven",
 
+  "block.cookiemod.portal" : "Portal",
+
   "block.cookiemod.cookie_jar" : "Cookie Jar",
 
   "item.cookiemod.crumbled_cookie" : "Cookie Crumbs",

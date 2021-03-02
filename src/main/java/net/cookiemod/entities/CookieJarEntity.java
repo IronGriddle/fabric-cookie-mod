@@ -24,6 +24,8 @@ public class CookieJarEntity extends BlockEntity implements ImplementedInventory
         return items;
     }
 
+
+
     @Override
     public void fromTag(BlockState state, CompoundTag tag) {
         super.fromTag(state, tag);
@@ -37,4 +39,6 @@ public class CookieJarEntity extends BlockEntity implements ImplementedInventory
         Inventories.toTag(tag, items);
         return tag;
     }
+
+
 }

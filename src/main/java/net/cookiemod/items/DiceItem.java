@@ -3,12 +3,10 @@ package net.cookiemod.items;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.LiteralText;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import software.bernie.geckolib3.core.AnimationState;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
@@ -69,9 +67,6 @@ public class DiceItem extends Item implements IAnimatable {
         RollDice();
         ItemStack stack = user.getStackInHand(hand);
         AnimationController controller = GeckoLibUtil.getControllerForStack(this.factory, stack, controllerName);
-
-
-
 
         return super.use(world, user, hand);
     }
